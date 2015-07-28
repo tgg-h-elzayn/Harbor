@@ -15,3 +15,5 @@ class Candidate(models.Model):
 class Skill(models.Model):
 	name = models.CharField(max_length=200)
 	user = models.ForeignKey(Candidate)
+	def __str__(self):
+		return str(self.name) + ": " + str(self.user)
