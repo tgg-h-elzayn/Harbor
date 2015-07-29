@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 class Candidate(models.Model):
-	user = models.OneToOneField(User, related_name="user_candidate")
+	user = models.ForeignKey(User, related_name="user_candidate")
 	name = models.CharField(max_length=200)
 	rating = models.DecimalField(decimal_places=2, max_digits=3)
 	join_date = models.DateTimeField(default = timezone.now)
