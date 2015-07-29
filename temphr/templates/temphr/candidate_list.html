@@ -1,0 +1,19 @@
+{% extends "temphr/base.html" %}
+	{% block content %}
+	{% for candidate in candidates %}
+		<div class="candidate-listing">
+			<p><h2><a href="">{{ candidate}}</a></h2>
+			Joined: <div class="date">{{candidate.join_date.date}}</div>
+			<br>
+			Skills:
+			<ul>
+				{% for skill in candidate.skill_set.get_queryset %}
+					<li> {{skill}} </li>
+				{% endfor %}
+			</ul>
+				
+
+			</p>
+		</div>
+	{% endfor %}
+{% endblock content %}

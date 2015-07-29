@@ -13,12 +13,12 @@ class Candidate(models.Model):
 		self.join_date = timezone.now()
 		self.save()
 	def __str__(self):
-		return self.name
+		return self.name	
 class Employer(models.Model):
 	user = models.OneToOneField(User, related_name="user_employer")
 	name = models.CharField(max_length=200)
 	def __str__(self):
-		return self.name
+		return str(self.name)
 class Skill(models.Model):
 	name = models.CharField(max_length=200)
 	user = models.ForeignKey(Candidate)
@@ -37,6 +37,10 @@ class Review(models.Model):
 class Job(models.Model):
 	employer = models.ForeignKey(Employer)
 	employee = models.ForeignKey(Candidate)
+	position = models.TextField(default="")
 	price = models.DecimalField(decimal_places=2, max_digits=6)
 	startDate = models.DateTimeField()
 	endDate = models.DateTimeField()
+
+	def __str__(self):
+		return str(self.employer) + ": " +str(self.employee) + " as " + str(self.position) + " from " + str(self.startDate)+" to" +str(self.endDate)

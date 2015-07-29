@@ -1,3 +1,43 @@
+h1{
+		font-family:'Lobster';
+
+}
 h2{
 		color:blue;
+		font-weight:bold;
+}
+.page-header{
+	background-color:#66ccff;
+	margin-top: 0;
+	padding: 20px 20px 20px 40px;
+}
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active{
+	color: "#ffffff";
+	font-size: 36 pt;
+	text-decoration: none;
+}
+.content{
+	margin-left:40px;
+}
+.date {
+	float:right;
+	color: #828282;
+}
+.save {
+	fload: right;
+}
+.post-form textarea, .post-form input{
+	width: 100%;
+}
+.top-menu, .top-menu:hover, .top-menu:visited{
+	color:"#ffffff";
+	float: right;
+	font-size:26pt;
+	margin-rgiht: 20px;
+}
+.candidate-listing{
+	margin-bottom: 70px;
+}
+.candidate-listing h2 a, .candidate-listing h2 a:visited{
+	color: "#000000";
 }
