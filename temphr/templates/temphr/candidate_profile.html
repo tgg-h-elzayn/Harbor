@@ -1,0 +1,14 @@
+{%extends "temphr/base.html" %}
+
+{% block content %}
+
+	<div class = "candidate">
+		{% if candidate.join_date %}
+			<div class="date">
+				{{candidate.join_date}}
+			</div>
+		{% endif %}
+	<h1> {{candidate.name}} </h1>
+	<h2> Description</h2>
+	<p>{{candidate.self_description}}</p>
+{% endblock %}

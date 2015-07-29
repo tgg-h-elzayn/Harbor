@@ -2,7 +2,7 @@
 	{% block content %}
 	{% for candidate in candidates %}
 		<div class="candidate-listing">
-			<p><h2><a href="">{{ candidate}}</a></h2>
+			<p><h2><a href="{% url "candidate_profile" pk=candidate.pk %}">{{ candidate}}</a></h2>
 			Joined: <div class="date">{{candidate.join_date.date}}</div>
 			<br>
 			Skills:
